@@ -15,6 +15,7 @@ $('.search').submit(function search () {
     console.log(tracks);
   for (a = 0; a<5; a++) {
   $('.lgi'+[a+1]).append(tracks[a].title);
+  $('.lgi'+[a+1]).append('<a href="' + tracks[a].permalink_url + '">'+'<i class="fa fa-soundcloud fa-2x" aria-hidden="true"></i>' + '</a>');
   }
   });
   $('.search').value('');

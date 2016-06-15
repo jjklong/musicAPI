@@ -5,6 +5,11 @@ SC.initialize({
 $('.search').submit(function search () {
   // e.preventDefault();
 
+  //reset every new search
+  for (a = 0; a<5; a++) {
+  $('.lgi'+[a+1]).html('');
+  }
+
   var artistSearch = $('input[class="form-control"]').val();
   console.log(artistSearch);
 
@@ -18,5 +23,5 @@ $('.search').submit(function search () {
   $('.lgi'+[a+1]).append('<a href="' + tracks[a].permalink_url + '">'+'<i class="fa fa-soundcloud fa-2x" aria-hidden="true"></i>' + '</a>');
   }
   });
-  $('.search').value('');
+
 });

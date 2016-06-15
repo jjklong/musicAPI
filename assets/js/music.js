@@ -10,6 +10,11 @@ $('.search').submit(function search (e) {
   var artistSearch = $('input[class="form-control"]').val();
   console.log(artistSearch);
 
+  for (a = 0; a < 5; a++){
+    $('#'+[a+1]).html('');
+    $('#d'+[a+1]).html('');
+  }
+
   //ARTIST SEARCH:
   $.getJSON('http://ws.audioscrobbler.com/2.0/?method=artist.search&artist=' + artistSearch + '&api_key=eadc058a923c4177179721feed47e2a6&format=json')
     .done(artistResults);
